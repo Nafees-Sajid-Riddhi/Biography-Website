@@ -1,0 +1,185 @@
+/* Imported fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Orbitron:wght@400;700&display=swap');
+
+/* Overall Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out; /* Transition Effect */
+}
+
+/* Fade Transition Effect */
+.fade-out {
+    opacity: 0.6;
+}
+
+/* Neon Glowing Effect */
+@keyframes neonPulse {
+    0% {
+        text-shadow: 0 0 5px #ff7f00, 0 0 10px #ff7f00, 0 0 15px #ff7f00, 0 0 20px #ff7f00;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff7f00, 0 0 20px #ff7f00, 0 0 30px #ff7f00, 0 0 40px #ff7f00;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff7f00, 0 0 10px #ff7f00, 0 0 15px #ff7f00, 0 0 20px #ff7f00;
+    }
+}
+
+/* Header - Neon Glowing Effect */
+header {
+    background-color: #111111; /* Dark background for the header */
+    color: #ff7f00; /* Neon orange glow */
+    padding: 40px 0; /* Reduced padding */
+    text-align: center;
+    font-size: 1.7em; /* Reduced font size */
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: neonPulse 1.5s infinite alternate; /* Neon glowing animation */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #1a1a1a; /* Dark background for nav */
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+nav a {
+    color: #ff7f00;
+    padding: 15px 30px;
+    margin-right: 25px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff7f00; /* Neon orange hover effect */
+    color: white;
+    box-shadow: 0 0 15px #ff7f00, 0 0 25px #ff7f00; /* Glowing effect on hover */
+    transform: scale(1.1); /* Slightly enlarging on hover */
+}
+
+/* Content Styling - Aqua/Teal Color */
+.content {
+    padding: 40px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Aqua/Teal glow around content */
+}
+
+/* Table Styles - Aqua/Teal Color */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #222222; /* Dark color for tables */
+    border-radius: 10px;
+}
+
+th, td {
+    border: 1px solid #00ffcc; /* Aqua/Teal borders */
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #333333; /* Dark background color for table headers */
+    color: #00ffcc; /* Aqua/Teal text */
+}
+
+td {
+    background-color: #292929; /* Dark background color for table cells */
+    color: #e5e5e5; /* Light gray color text */
+}
+
+/* Neon Glowing Buttons */
+button {
+    background-color: #ff7f00; /* Neon orange button */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff7f00, 0 0 20px #ff7f00;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #00ffcc; /* Neon teal hover effect */
+    box-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+}
+
+/* Image Styles */
+img {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Neon teal glow */
+}
+
+/* Video Container */
+.video-container {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #111111;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5); /* Aqua/Teal glow around video */
+}
+
+.video-container iframe {
+    border-radius: 10px;
+}
+
+/* Biography Section - Aqua/Teal Color */
+#bio img {
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Aqua/Teal glow around the photo */
+}
+
+#bio .info {
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    color: #e5e5e5;
+}
+
+#bio table {
+    width: 50%;
+    margin-top: 20px;
+    border: 1px solid #00ffcc; /* Aqua/Teal border for biography table */
+    border-radius: 8px;
+    background-color: #333333;
+}
+
+#bio td {
+    padding: 15px;
+    text-align: center;
+    color: #e5e5e5;
+}
+
+/* Background Pattern */
+body {
+    background-image: url('images/futuristic-pattern.png'); /* Optional */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

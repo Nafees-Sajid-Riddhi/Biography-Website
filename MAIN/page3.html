@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Negative Aspects of AI on Employment</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>The Negative Aspects of AI on Employment</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="page2.html">Positive Aspects</a>
+    <a href="page3.html">Negative Aspects</a>
+    <a href="biography.html">Biography</a>
+</nav>
+
+<div class="content">
+    <h2>1) Job Displacement and Automation:</h2>
+    <p>While AI will create new jobs, it will possibly replace workers in lower-skill industries such as manufacturing, retail, and transport.</p>
+
+    <h2>2) Economic Inequality:</h2>
+    <p>Presence of AI might increase income inequality, as high-skill workers will benefit but low-skill workers will face unemployment.</p>
+<br>
+<br>
+<br>
+
+    <h3>Jobs Most at Risk vs. Jobs Less Likely to be Replaced by AI:</h3>
+    <table>
+        <tr>
+            <th>Jobs Most at Risk</th>
+            <th>Jobs Less Likely to be Replaced</th>
+        </tr>
+        <tr>
+            <td>Truck Driver</td>
+            <td>Healthcare Worker</td>
+        </tr>
+        <tr>
+            <td>Cashier</td>
+            <td>Teacher</td>
+        </tr>
+        <tr>
+            <td>Traditional Worker</td>
+            <td>Creative Professional</td>
+        </tr>
+    </table>
+
+    <div>
+        <img src="images/ai-negative.jpg" alt="AI Negatives">
+    </div>
+</div>
+
+<script>
+// Wait for the page to load
+window.addEventListener('load', function() {
+    // Enable scroll position preservation (works on most modern browsers)
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual'; // Disable automatic scroll reset
+    }
+
+    // Retrieve stored scroll position (if any)
+    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+    if (savedScrollPosition) {
+        window.scrollTo(0, savedScrollPosition); // Scroll to the saved position
+        sessionStorage.removeItem('scrollPosition'); // Clear saved position after applying
+    }
+
+    // Store the scroll position before navigating away
+    const links = document.querySelectorAll('nav a'); // Select all the links in the nav
+    const body = document.querySelector('body'); // The body to fade in/out
+
+    // Function to add fade-out effect
+    function fadeOut() {
+        body.classList.add('fade-out'); // Apply fade-out class
+    }
+
+    // Function to remove fade-out effect after delay
+    function fadeIn() {
+        setTimeout(function() {
+            body.classList.remove('fade-out'); // Remove fade-out class after delay
+        }, 400); // Delay matches the transition duration (0.4s)
+    }
+
+    // Add event listeners to each navigation link
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link action
+
+            // Store the current scroll position before navigating
+            sessionStorage.setItem('scrollPosition', window.scrollY);
+
+            fadeOut(); // Apply fade-out effect
+            const targetPage = link.getAttribute('href'); // Get the target page URL
+
+            // Wait for the fade-out effect and then redirect to the new page
+            setTimeout(function() {
+                window.location.href = targetPage; // Redirect to the page after fade-out
+            }, 400); // Time matches the transition duration (0.4s)
+        });
+    });
+});
+</script>
+
+
+
+
+</body>
+</html>
